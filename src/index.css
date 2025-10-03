@@ -67,6 +67,12 @@
 
 /* Font application rules */
 
+/* Hero text with Cormorant Garamond font */
+.hero-text-cormorant,
+.hero-text-cormorant * {
+    font-family: 'CormorantGaramond', serif !important;
+}
+
 /* Keep Amoura Works logo and portfolio main headings unchanged */
 .font-bunya-keep,
 h1.font-\[font2\],
