@@ -211,7 +211,7 @@ const AboutSection = () => {
 
               {/* Image side with parallax */}
               <div className='order-1 lg:order-2 relative' ref={storyCardRef}>
-                <div className='about-image-wrapper relative aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden'>
+                <div className='about-image-wrapper relative aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-900'>
                   {/* Image overlay gradient */}
                   <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none'></div>
 
@@ -221,6 +221,8 @@ const AboutSection = () => {
                     alt="Our Team in Action"
                     className='w-full h-full object-cover transition-all duration-500 scale-105 group-hover:scale-110'
                     loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                   />
 
                   {/* Decorative corner accent */}

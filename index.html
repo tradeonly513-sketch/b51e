@@ -26,11 +26,15 @@
     
     <!-- Preload video for better iOS performance -->
     <link rel="preload" href="/video.mp4" as="video" type="video/mp4" />
-    
+
+    <!-- Preload critical About section image -->
+    <link rel="preload" href="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop" as="image" fetchpriority="high" />
+
     <!-- Optimize for different devices -->
     <meta name="format-detection" content="telephone=no" />
-    
+
     <!-- Performance hints -->
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin />
     <link rel="dns-prefetch" href="//images.pexels.com" />
     <link rel="dns-prefetch" href="//videos.pexels.com" />
     <link rel="dns-prefetch" href="//www.youtube.com" />
