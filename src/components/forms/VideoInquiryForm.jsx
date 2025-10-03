@@ -102,12 +102,18 @@ const VideoInquiryForm = () => {
     setSubmitStatus(null)
 
     try {
-      const response = await fetch('/api/inquiry', {
+      const formDataToSend = new FormData()
+
+      Object.keys(formData).forEach(key => {
+        formDataToSend.append(key, formData[key])
+      })
+
+      const response = await fetch('https://formspree.io/f/myznjawq', {
         method: 'POST',
+        body: formDataToSend,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
+          'Accept': 'application/json'
+        }
       })
 
       if (response.ok) {

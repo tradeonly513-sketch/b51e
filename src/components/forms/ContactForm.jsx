@@ -113,9 +113,12 @@ const ContactForm = () => {
         formDataToSend.append(`file${index}`, file)
       })
 
-      const response = await fetch('https://formspree.io/f/mandlzyw', {
+      const response = await fetch('https://formspree.io/f/myznjawq', {
         method: 'POST',
         body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
       })
 
       if (response.ok) {
