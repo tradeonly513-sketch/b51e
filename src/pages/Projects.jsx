@@ -110,7 +110,7 @@ const Projects = () => {
       <div className='pt-[25vh] sm:pt-[30vh] lg:pt-[35vh] component-margin flex flex-col items-center justify-center text-center'>
         <div className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12 mx-auto'>
           <h1 className='font-[font2] heading-responsive-xl uppercase text-white text-layer-3 text-glow'>
-            The designs that turn vision into a bold reality
+            A Curated Collection of Love Stories
           </h1>
           <div className='flex justify-center items-center'>
             <Link 
