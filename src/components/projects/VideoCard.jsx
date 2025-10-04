@@ -13,19 +13,26 @@ const VideoCard = ({ videoId, aspectRatio, index }) => {
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
   const fallbackThumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
 
-  // Entrance animation
+  // Enhanced entrance animation with depth
   useGSAP(() => {
     if (cardRef.current) {
       gsap.fromTo(
         cardRef.current,
-        { opacity: 0, y: 30, scale: 0.95 },
+        {
+          opacity: 0,
+          y: 60,
+          scale: 0.92,
+          rotateX: 8,
+          transformPerspective: 1000
+        },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 0.6,
-          ease: 'power2.out',
-          delay: index * 0.1
+          rotateX: 0,
+          duration: 1,
+          ease: 'power3.out',
+          delay: index * 0.08
         }
       )
     }
@@ -42,8 +49,12 @@ const VideoCard = ({ videoId, aspectRatio, index }) => {
   return (
     <div
       ref={cardRef}
-      className={`video-container group relative ${aspectRatio || 'aspect-video'} w-full overflow-hidden rounded-lg sm:rounded-xl bg-transparent shadow-none border-none`}
-      style={{ background: 'transparent', boxShadow: 'none', border: 'none' }}
+      className={`video-container group relative ${aspectRatio || 'aspect-video'} w-full overflow-hidden rounded-xl lg:rounded-2xl bg-transparent transition-all duration-500 ease-out will-change-transform`}
+      style={{
+        background: 'transparent',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+        border: '1px solid rgba(255, 255, 255, 0.05)'
+      }}
     >
       {/* Loading Spinner */}
       {!isLoaded && !hasError && (
@@ -97,8 +108,14 @@ const VideoCard = ({ videoId, aspectRatio, index }) => {
         />
       )}
 
-      {/* Subtle Hover Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-lg sm:rounded-xl" />
+      {/* Enhanced Hover Effects */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none rounded-xl lg:rounded-2xl" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" style={{
+        boxShadow: '0 20px 60px rgba(211, 253, 80, 0.15), 0 0 40px rgba(211, 253, 80, 0.1)'
+      }} />
+      <div className="absolute -inset-[1px] rounded-xl lg:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" style={{
+        background: 'linear-gradient(135deg, rgba(211, 253, 80, 0.2), transparent 40%, transparent 60%, rgba(211, 253, 80, 0.1))'
+      }} />
     </div>
   )
 }

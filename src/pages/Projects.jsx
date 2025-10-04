@@ -47,47 +47,69 @@ const Projects = () => {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
-    gsap.fromTo('.video-container', 
+    // Enhanced video entrance with stagger
+    gsap.fromTo('.video-container',
       {
         opacity: 0,
-        scale: 0.95,
-        y: 30
+        scale: 0.92,
+        y: 60,
+        rotateX: 8
       },
       {
         opacity: 1,
         scale: 1,
         y: 0,
-        duration: 0.6,
-        ease: "power2.out",
+        rotateX: 0,
+        duration: 1,
+        ease: "power3.out",
         stagger: {
-          amount: 0.4
+          amount: 0.6,
+          from: "start",
+          ease: "power2.inOut"
         },
         scrollTrigger: {
           trigger: '.video-container',
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        }
-      }
-    )
-
-    gsap.fromTo('.section-title',
-      {
-        opacity: 0,
-        y: 20
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: '.section-title',
           start: 'top 90%',
           toggleActions: 'play none none none'
         }
       }
     )
+
+    // Smooth section title reveal
+    gsap.fromTo('.section-title',
+      {
+        opacity: 0,
+        y: 40,
+        scale: 0.95
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '.section-title',
+          start: 'top 92%',
+          toggleActions: 'play none none none'
+        }
+      }
+    )
+
+    // Parallax effect for sections
+    gsap.utils.toArray('.portfolio-section').forEach((section) => {
+      gsap.to(section, {
+        y: -50,
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1
+        }
+      })
+    })
   })
 
   return (
@@ -113,13 +135,16 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className='projects-content space-y-16 sm:space-y-24 lg:space-y-32'>
+      <div className='projects-content space-y-24 sm:space-y-32 lg:space-y-48'>
         {/* Highlights Section */}
-        <section className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12 flex flex-col items-center'>
-          <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
-            Highlights
-          </h2>
-          <div className="w-full max-w-6xl">
+        <section className='portfolio-section floating-panel-dark space-y-12 sm:space-y-16 lg:space-y-20 flex flex-col items-center'>
+          <div className='space-y-4'>
+            <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
+              Highlights
+            </h2>
+            <div className='w-24 h-1 mx-auto bg-gradient-to-r from-transparent via-[#D3FD50] to-transparent opacity-50'></div>
+          </div>
+          <div className="w-full max-w-7xl px-4">
             <VideoGrid
               videos={highlights}
               gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
@@ -129,11 +154,14 @@ const Projects = () => {
         </section>
 
         {/* Cinematic Long Highlights Section */}
-        <section className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12 flex flex-col items-center'>
-          <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
-            Cinematic Long Highlights
-          </h2>
-          <div className="w-full max-w-6xl">
+        <section className='portfolio-section floating-panel-dark space-y-12 sm:space-y-16 lg:space-y-20 flex flex-col items-center'>
+          <div className='space-y-4'>
+            <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
+              Cinematic Long Highlights
+            </h2>
+            <div className='w-24 h-1 mx-auto bg-gradient-to-r from-transparent via-[#D3FD50] to-transparent opacity-50'></div>
+          </div>
+          <div className="w-full max-w-7xl px-4">
             <VideoGrid
               videos={cinematicLongHighlights}
               gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
@@ -143,11 +171,14 @@ const Projects = () => {
         </section>
 
         {/* Teasers Section */}
-        <section className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12 flex flex-col items-center'>
-          <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
-            Teasers
-          </h2>
-          <div className="w-full max-w-6xl">
+        <section className='portfolio-section floating-panel-dark space-y-12 sm:space-y-16 lg:space-y-20 flex flex-col items-center'>
+          <div className='space-y-4'>
+            <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
+              Teasers
+            </h2>
+            <div className='w-24 h-1 mx-auto bg-gradient-to-r from-transparent via-[#D3FD50] to-transparent opacity-50'></div>
+          </div>
+          <div className="w-full max-w-7xl px-4">
             <VideoGrid
               videos={teasers}
               gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"

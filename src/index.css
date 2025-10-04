@@ -2219,6 +2219,71 @@ iframe {
     }
 }
 
+/* Enhanced Portfolio Section Styles */
+.portfolio-section {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.video-container {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .video-container:hover {
+    transform: translateY(-8px) scale(1.02);
+    transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
+
+/* Section divider accent lines */
+.portfolio-section .section-title + div {
+  animation: expandLine 1s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes expandLine {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 0.5;
+  }
+}
+
+/* Smooth scroll snap for portfolio sections */
+.projects-content {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced depth and layering */
+.floating-panel-dark {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.floating-panel-dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 0%, rgba(211, 253, 80, 0.03), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .floating-panel-dark:hover::after {
+    opacity: 1;
+  }
+}
+
 /* Responsive touch improvements */
 @media (pointer: coarse) {
     /* Larger touch targets for touch devices */
