@@ -5,46 +5,21 @@ import { ScrollTrigger } from 'gsap/all'
 import PortfolioGallery from './PortfolioGallery'
 
 const teasers = [
-  {
-    url: 'https://www.youtube.com/watch?v=OcZAFfSru5A',
-    title: 'swipe right for more'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=71xzS-WkO50',
-    title: 'Portfolio Showcase 2'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=AqqGxOrwv_g',
-    title: 'Portfolio Showcase 3'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=YM1TZnbcbOs',
-    title: 'Portfolio Showcase 4'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=HMJyD-kPWek',
-    title: 'Portfolio Showcase 5'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=L9PMwOelcRk',
-    title: 'Portfolio Showcase 6'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=dRjCKw7YonM',
-    title: 'Portfolio Showcase 7'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=MZeXtcH1JXc',
-    title: 'Portfolio Showcase 8'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=HMGyMunzLfU',
-    title: 'Portfolio Showcase 9'
-  },
-  {
-    url: 'https://www.youtube.com/watch?v=Jb0lmUL9v_c',
-    title: 'Portfolio Showcase 10'
-  }
+  { url: 'https://www.youtube.com/watch?v=j5Yo9w4QLf8', title: 'Maher & Cynthia — 9' },
+  { url: 'https://www.youtube.com/watch?v=UZrSG4UUan8', title: 'Angela & John — 9' },
+  { url: 'https://www.youtube.com/watch?v=dCbp_xoNW1s', title: 'Jessie & Michael — 9.5' },
+  { url: 'https://www.youtube.com/watch?v=GtQxWgD9v0s', title: 'Austin & Katie — 8.5' },
+  { url: 'https://www.youtube.com/watch?v=x2QE07ybrM4', title: 'Vincent & Alley — 8.5' },
+  { url: 'https://www.youtube.com/watch?v=QX08wn8Bi6E', title: 'Summer & Mason — 9' },
+  { url: 'https://www.youtube.com/watch?v=QY1b-DwrfVk', title: 'Hailey & Nicholas — 8.5' },
+  { url: 'https://www.youtube.com/watch?v=pRd1BnUKhwk', title: 'Denny & Beckie — 8' },
+  { url: 'https://www.youtube.com/watch?v=xcD17BVK0hI', title: 'Ella & Sam — 10' },
+  { url: 'https://www.youtube.com/watch?v=LqkLRfDQZqQ', title: 'Brandon & Juliana — 8.5' },
+  { url: 'https://www.youtube.com/watch?v=L9PMwOelcRk', title: 'Extra Video — L9PMwOelcRk' },
+  { url: 'https://www.youtube.com/watch?v=2qFnRXpSFn8', title: 'Extra Video — 2qFnRXpSFn8 (Good)' },
+  { url: 'https://www.youtube.com/watch?v=YM1TZnbcbOs', title: 'Extra Video — YM1TZnbcbOs (Good)' },
+  { url: 'https://www.youtube.com/watch?v=QstSPHan4oE', title: 'Extra Video — QstSPHan4oE (Good)' },
+  { url: 'https://www.youtube.com/watch?v=HQlRBpUM1pQ', title: 'Extra Video — HQlRBpUM1pQ (Good)' }
 ]
 
 const PortfolioSection = () => {
