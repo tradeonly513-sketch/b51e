@@ -133,9 +133,9 @@ const Footer = () => {
               Address
             </h3>
             <div className='font-[font1] text-base sm:text-lg lg:text-xl text-white/80 leading-loose space-y-2 sm:space-y-3'>
-              <p>22 ruelle du Clerc</p>
-              <p>59126, Linselles</p>
-              <p>(France)</p>
+              <p>Logix Blossom County</p>
+              <p>Noida, Uttar Pradesh</p>
+              <p>India</p>
             </div>
           </div>
 

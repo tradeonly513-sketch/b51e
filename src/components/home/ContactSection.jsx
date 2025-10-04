@@ -105,7 +105,7 @@ const ContactSection = () => {
                   <span className="micro-bounce glow-accent flex items-center justify-center w-8 h-8 rounded-lg bg-[#D3FD50]/10 border border-[#D3FD50]/20">
                     <MapPin className="w-4 h-4 text-[#D3FD50]" strokeWidth={1.5} />
                   </span>
-                  <span>22 ruelle du Clerc, 59126, Linselles (France)</span>
+                  <span>Logix Blossom County, Noida, Uttar Pradesh, India</span>
                 </p>
                 <p className="flex items-start sm:items-center space-x-3 sm:space-x-4">
                   <span className="micro-bounce glow-accent flex items-center justify-center w-8 h-8 rounded-lg bg-[#D3FD50]/10 border border-[#D3FD50]/20">

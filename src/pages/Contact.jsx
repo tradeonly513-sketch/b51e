@@ -85,7 +85,7 @@ const Contact = () => {
                     <span className='flex items-center justify-center w-10 h-10 rounded-lg bg-[#D3FD50]/10 border border-[#D3FD50]/20'>
                       <MapPin className='w-5 h-5 text-[#D3FD50]' strokeWidth={1.5} />
                     </span>
-                    <span>22 ruelle du Clerc, 59126, Linselles (France)</span>
+                    <span>Logix Blossom County, Noida, Uttar Pradesh, India</span>
                   </div>
                 </div>
               </div>
