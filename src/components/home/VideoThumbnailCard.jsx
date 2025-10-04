@@ -21,7 +21,7 @@ function VideoThumbnailCard({ video, onClick }) {
       className="group cursor-pointer flex-shrink-0"
     >
       <div
-        className="relative aspect-video w-[90vw] max-w-[400px] md:w-96 lg:w-[500px] rounded-lg overflow-hidden transition-transform duration-300 group-hover:scale-105"
+        className="relative aspect-video w-[90vw] max-w-[400px] md:aspect-auto md:w-96 md:h-[216px] lg:w-[500px] lg:h-[281px] rounded-lg overflow-hidden transition-transform duration-300 group-hover:scale-105 md:bg-black"
         style={{
           boxShadow: `
             rgba(0, 0, 0, 0.01) 0.796192px 0px 0.796192px 0px,
@@ -34,7 +34,7 @@ function VideoThumbnailCard({ video, onClick }) {
         <img
           src={thumbnailUrl}
           alt={video.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover md:object-contain"
           loading="lazy"
         />
 
