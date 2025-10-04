@@ -17,43 +17,31 @@ import { Link } from 'react-router-dom'
  */
 const Projects = () => {
 
-  // Teasers section - replaced with provided video IDs
-  const teasers = [
-    { videoId: 'QGsa5QB5gK4' },
-    { videoId: '5fR4MErzYeI' },
-    { videoId: '2qFnRXpSFn8' },
-    { videoId: '7bZ5MKY6pfU' },
-    { videoId: 'QstSPHan4oE' },
-    { videoId: 'HMJyD-kPWek' },
-    { videoId: 'zd5De3LAMQc' },
-    { videoId: 'HMJyD-kPWek' },
-    { videoId: 'YM1TZnbcbOs' },
-    { videoId: 'pRya97qUJMs' },
-    { videoId: 'AqqGxOrwv_g' }
+  // Cinematic Long Highlights section - 5 videos
+  const cinematicLongHighlights = [
+    { videoId: 'j5Yo9w4QLf8' },
+    { videoId: 'UZrSG4UUan8' },
+    { videoId: 'dCbp_xoNW1s' },
+    { videoId: 'GtQxWgD9v0s' },
+    { videoId: 'x2QE07ybrM4' }
   ]
 
-  // Highlights section - starts with last provided videoId, rest unchanged
+  // Highlights section - 5 videos
   const highlights = [
-    { videoId: '2qFnRXpSFn8' },
-    { videoId: 'dRjCKw7YonM' },
+    { videoId: 'QX08wn8Bi6E' },
+    { videoId: 'QY1b-DwrfVk' },
+    { videoId: 'pRd1BnUKhwk' },
+    { videoId: 'xcD17BVK0hI' },
+    { videoId: 'LqkLRfDQZqQ' }
+  ]
+
+  // Teasers section - 5 videos
+  const teasers = [
     { videoId: 'L9PMwOelcRk' },
-    { videoId: 'qeMFqkcPYcg' },
-    { videoId: 'SQoA_wjmE9w' },
-    { videoId: 'ZbZSe6N_BXs' },
-    { videoId: 'HEXWRTEbj1I' },
-    { videoId: 'U9t-slLl69E' },
-    { videoId: 'iik25wqIuFo' },
-    { videoId: 'C0DPdy98e4c' },
-    { videoId: 'YQHsXMglC9A' },
-    { videoId: 'AdUw5RdyZxI' },
-    { videoId: 'hTWKbfoikeg' },
-    { videoId: 'NUYvbT6vTPs' },
-    { videoId: 'RgKAFK5djSk' },
-    { videoId: 'uelHwf8o7_U' },
-    { videoId: 'EhxJLojIE_o' },
-    { videoId: 'KQ6zr6kCPj8' },
-    { videoId: 'MtN1YnoL46Q' },
-    { videoId: 'sOnqjkJTMaA' }
+    { videoId: '2qFnRXpSFn8' },
+    { videoId: 'YM1TZnbcbOs' },
+    { videoId: 'QstSPHan4oE' },
+    { videoId: 'HQlRBpUM1pQ' }
   ]
 
   gsap.registerPlugin(ScrollTrigger)
@@ -126,29 +114,43 @@ const Projects = () => {
       </div>
 
       <div className='projects-content space-y-16 sm:space-y-24 lg:space-y-32'>
-        {/* Teasers Section */}
+        {/* Highlights Section */}
         <section className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12 flex flex-col items-center'>
           <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
-            Teasers
+            Highlights
           </h2>
           <div className="w-full max-w-6xl">
-            <VideoGrid 
-              videos={teasers} 
+            <VideoGrid
+              videos={highlights}
               gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
               aspectRatio="aspect-video"
             />
           </div>
         </section>
 
-        {/* Highlights Section */}
+        {/* Cinematic Long Highlights Section */}
         <section className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12 flex flex-col items-center'>
           <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
-            Highlights
+            Cinematic Long Highlights
           </h2>
-          <div className="w-full max-w-7xl">
-            <VideoGrid 
-              videos={highlights} 
-              gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          <div className="w-full max-w-6xl">
+            <VideoGrid
+              videos={cinematicLongHighlights}
+              gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+              aspectRatio="aspect-video"
+            />
+          </div>
+        </section>
+
+        {/* Teasers Section */}
+        <section className='floating-panel-dark space-y-8 sm:space-y-10 lg:space-y-12 flex flex-col items-center'>
+          <h2 className='section-title font-[font2] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase text-center text-layer-2 text-glow'>
+            Teasers
+          </h2>
+          <div className="w-full max-w-6xl">
+            <VideoGrid
+              videos={teasers}
+              gridCols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
               aspectRatio="aspect-video"
             />
           </div>
