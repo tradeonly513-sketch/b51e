@@ -5,13 +5,13 @@ import { ScrollTrigger } from 'gsap/all'
 import PortfolioGallery from './PortfolioGallery'
 
 const teasers = [
-  { url: 'https://www.youtube.com/watch?v=xcD17BVK0hI', title: 'Portfolio Showcase 9' },   // Ella and Sam - 10
-  { url: 'https://www.youtube.com/watch?v=QX08wn8Bi6E', title: 'Portfolio Showcase 6' },   // Summer & Mason - 9
-  { url: 'https://www.youtube.com/watch?v=L9PMwOelcRk', title: 'Portfolio Showcase 11' },  // Good
-  { url: 'https://www.youtube.com/watch?v=2qFnRXpSFn8', title: 'Portfolio Showcase 12' },  // Good
-  { url: 'https://www.youtube.com/watch?v=j5Yo9w4QLf8', title: 'swipe right for more' },   // Maher and Cynthia - 9
-  { url: 'https://www.youtube.com/watch?v=UZrSG4UUan8', title: 'Portfolio Showcase 2' },   // Angela and John - 9
-  { url: 'https://www.youtube.com/watch?v=dCbp_xoNW1s', title: 'Portfolio Showcase 3' }    // Jessie & Michael - 9.5
+  { url: 'https://www.youtube.com/watch?v=xcD17BVK0hI', title: 'Ella and Sam' },
+  { url: 'https://www.youtube.com/watch?v=QX08wn8Bi6E', title: 'Summer & Mason' },
+  { url: 'https://www.youtube.com/watch?v=L9PMwOelcRk', title: 'Good' },
+  { url: 'https://www.youtube.com/watch?v=2qFnRXpSFn8', title: 'Good' },
+  { url: 'https://www.youtube.com/watch?v=j5Yo9w4QLf8', title: 'Maher and Cynthia' },
+  { url: 'https://www.youtube.com/watch?v=UZrSG4UUan8', title: 'Angela and John' },
+  { url: 'https://www.youtube.com/watch?v=dCbp_xoNW1s', title: 'Jessie & Michael' }
 ]
 
 const PortfolioSection = () => {
