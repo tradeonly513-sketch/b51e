@@ -152,7 +152,7 @@ const ContactForm = () => {
   return (
     <div className='floating-panel-dark'>
       <h2 className='font-[font2] heading-responsive-lg uppercase text-[#D3FD50] mb-6 sm:mb-8 lg:mb-10 text-layer-2 text-glow'>
-        Inquire Now
+        Contact Us
       </h2>
       
       {submitStatus === 'success' && (

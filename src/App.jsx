@@ -11,7 +11,6 @@ gsap.registerPlugin(ScrollTrigger)
 const Home = lazy(() => import('./pages/Home'))
 const Projects = lazy(() => import('./pages/Projects'))
 const Contact = lazy(() => import('./pages/Contact'))
-const VideoInquiry = lazy(() => import('./pages/VideoInquiry'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const TermsOfService = lazy(() => import('./pages/TermsOfService'))
 const AffiliateProgram = lazy(() => import('./pages/AffiliateProgram'))
@@ -42,7 +41,6 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/video-inquiry' element={<VideoInquiry />} />
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/terms-of-service' element={<TermsOfService />} />
           <Route path='/affiliate-program' element={<AffiliateProgram />} />

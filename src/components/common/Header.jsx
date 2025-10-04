@@ -163,7 +163,6 @@ const Header = () => {
 
   const navigationItems = [
     { name: 'Portfolio', href: '/projects' },
-    { name: 'Inquire Now', href: '/video-inquiry' },
     { name: 'Contact Us', href: '/contact' }
   ]
 
