@@ -128,7 +128,7 @@ const ServicesSection = () => {
       icon: 'clapperboard',
       title: 'Highlight Film',
       description: 'Our signature 8–12 minute cinematic edit — a complete story arc of your day or event, cut with rhythm and emotion so it feels like a movie.',
-      features: ['8–12 Minute Edit', 'Cinematic Story Arc', 'Professional Color Grade', 'Emotion-Driven Cuts'],
+      features: ['8–12 Minute Edit', 'Cinematic Story Arc', 'includes more vows,speeches and more story details', 'Emotion-Driven Cuts'],
       gradient: 'from-blue-500/20 to-cyan-500/20'
     },
     {
