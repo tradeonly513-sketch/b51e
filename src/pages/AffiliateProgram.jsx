@@ -55,7 +55,7 @@ const AffiliateProgram = () => {
     },
     {
       question: 'Is there a limit to how much I can earn?',
-      answer: 'No limits! The more qualified referrals you bring, the more you earn. Top affiliates earn €5,000+ monthly.'
+      answer: 'No limits! The more qualified referrals you bring, the more you earn.'
     }
   ]
 
