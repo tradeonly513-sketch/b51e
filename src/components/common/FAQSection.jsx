@@ -14,7 +14,7 @@ const FAQSection = () => {
     },
     {
       question: "What types of videos do you specialize in?",
-      answer: "We specialize in corporate videos, commercials, promotional content, event coverage, documentary-style films, and social media content. Our team has extensive experience across various industries and formats."
+      answer: "We specialize in Wedding edits -  Highlights, Full Feature films, Real estate edits, corporate videos, commercials and event videos"
     },
     {
       question: "Can you work with clients remotely?",
