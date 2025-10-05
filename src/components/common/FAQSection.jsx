@@ -22,7 +22,7 @@ const FAQSection = () => {
     },
     {
       question: "What equipment and software do you use?",
-      answer: "We use professional-grade cinema cameras, lighting equipment, and sound recording tools. Our post-production suite includes industry-standard software like Adobe Premiere Pro, After Effects, and DaVinci Resolve for color grading."
+      answer: "Our post-production suite includes industry-standard software like Adobe Premiere Pro, After Effects, and DaVinci Resolve."
     },
     {
       question: "How do you handle project pricing?",
