@@ -114,7 +114,7 @@ const ServicesSection = () => {
       icon: 'film',
       title: 'Teaser Film',
       description: 'A 1–2 minute cinematic trailer — short, punchy, and perfect for social media. Designed to build anticipation and share the vibe instantly.',
-      features: ['1–2 Minute Edit', 'Cinematic Trailer', 'Optimized for Social Media', 'Fast Delivery'],
+      features: ['1–2 Minute Edit', 'Cinematic Trailer', 'Optimized for Social Media', 'On-Time Delivery'],
       gradient: 'from-purple-500/20 to-pink-500/20'
     },
     {
@@ -135,7 +135,7 @@ const ServicesSection = () => {
       icon: 'target',
       title: 'Highlight + Teaser',
       description: 'The best of both worlds — a cinematic highlight plus a short teaser to share everywhere. Our most requested combo.',
-      features: ['Highlight Film Included', 'Teaser Trailer Included', 'Social Media Ready', 'Most Popular Combo'],
+      features: ['Highlight Film Included', 'Teaser Included', 'Social Media Ready', 'Most Popular Combo'],
       gradient: 'from-red-500/20 to-rose-500/20'
     },
     {
@@ -149,7 +149,7 @@ const ServicesSection = () => {
       icon: 'flame',
       title: 'Complete Package',
       description: 'Highlight + Teaser + Full Documentary (30–90 minutes). For clients who want it all — cinematic storytelling plus full archival coverage.',
-      features: ['Highlight Film', 'Teaser Trailer', '30–90 Min Documentary', 'Comprehensive Coverage'],
+      features: ['Highlight Film', 'Teaser included', '30–90 Min Documentary', 'Comprehensive Coverage'],
       gradient: 'from-orange-500/20 to-red-500/20'
     },
     {
