@@ -126,7 +126,7 @@ const PrivacyPolicy = () => {
               </p>
               <div className='glass rounded-lg sm:rounded-xl responsive-padding-md space-y-1 sm:space-y-2'>
                 <p className='font-[font1] text-responsive text-layer-1 break-all sm:break-normal'>
-                  <strong>Email:</strong> helpdesk@amourafilms.com
+                  <strong>Email:</strong> contact@amourafilms.com
                 </p>
               </div>
             </section>
