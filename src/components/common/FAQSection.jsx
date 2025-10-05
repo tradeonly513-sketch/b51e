@@ -10,7 +10,7 @@ const FAQSection = () => {
     },
     {
       question: "Do you offer revisions on the final video?",
-      answer: "Yes, we include up to 3 rounds of revisions in our standard packages. Additional revisions can be accommodated at a nominal fee. We work closely with you to ensure the final product meets your vision."
+      answer: "Yes, we include up to 2 rounds of revisions in our standard packages. Additional revisions can be accommodated at a nominal fee. We work closely with you to ensure the final product meets your vision."
     },
     {
       question: "What types of videos do you specialize in?",
