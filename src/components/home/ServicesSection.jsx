@@ -141,7 +141,7 @@ const ServicesSection = () => {
     {
       icon: 'video',
       title: 'Feature Film',
-      description: 'A 12–25 minute extended cinematic cut. Includes vows, speeches, and more woven into a story-driven film experience.',
+      description: 'Includes extended vows, speeches and more woven into a story driven film experience',
       features: ['12–25 Minute Film', 'Vows & Speeches Included', 'Cinematic Narrative', 'Immersive Audio Mix'],
       gradient: 'from-indigo-500/20 to-purple-500/20'
     },
