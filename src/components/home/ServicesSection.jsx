@@ -121,7 +121,7 @@ const ServicesSection = () => {
       icon: 'zap',
       title: 'Short Highlight Film',
       description: 'A 3–6 minute cinematic story cut. Quick, powerful, and emotionally rich — more depth than a teaser, without going long.',
-      features: ['3–6 Minute Edit', 'Cinematic Storytelling', 'Licensed Music', 'Perfect for Sharing'],
+      features: ['3–6 Minute Edit', 'Cinematic Storytelling', 'Best moments of the wedding compiled in a story form'],
       gradient: 'from-yellow-500/20 to-orange-500/20'
     },
     {
