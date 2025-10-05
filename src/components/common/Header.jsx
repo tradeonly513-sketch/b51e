@@ -163,7 +163,7 @@ const Header = () => {
 
   const navigationItems = [
     { name: 'Portfolio', href: '/projects' },
-    { name: 'Inquire Us', href: '/contact' }
+    { name: 'Inquire now', href: '/contact' }
   ]
 
   const handleSmoothScroll = (e, href) => {
