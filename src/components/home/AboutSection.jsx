@@ -217,7 +217,7 @@ const AboutSection = () => {
 
                   <img
                     ref={imageRef}
-                    src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop"
+                    src="/aboutus.jpeg"
                     alt="Our Team in Action"
                     className='w-full h-full object-cover transition-all duration-500 scale-105 group-hover:scale-110'
                     loading="eager"
