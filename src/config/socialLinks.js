@@ -1,7 +1,7 @@
 export const socialLinks = {
-  instagram: 'https://instagram.com/s111khar',
-  facebook: 'https://facebook.com/',
-  linkedin: 'https://linkedin.com/company/'
+  instagram: 'https://instagram.com/amouraworks',
+  facebook: 'https://www.facebook.com/profile.php?id=61581449278227&sk=about',
+  linkedin: 'https://linkedin.com/company/amoura-works'
 }
 
 export const socialIcons = [
