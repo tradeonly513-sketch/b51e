@@ -45,13 +45,13 @@ const StatsSection = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  const animateCounter = (element, finalNumber, duration = 2.5) => {
+  const animateCounter = (element, finalNumber, duration = 1.5) => {
     const counter = { value: 0 }
 
     gsap.to(counter, {
       value: finalNumber,
       duration: duration,
-      ease: "expo.out",
+      ease: "power2.out",
       onUpdate: () => {
         element.textContent = Math.floor(counter.value).toLocaleString()
       }
@@ -63,17 +63,13 @@ const StatsSection = () => {
       gsap.fromTo('.stats-title',
         {
           opacity: 0,
-          y: 60,
-          scale: 0.9,
-          rotateX: -15
+          y: 30
         },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          rotateX: 0,
-          duration: 1.2,
-          ease: "power3.out",
+          duration: 0.8,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: '.stats-title',
             start: 'top 80%',
@@ -85,22 +81,14 @@ const StatsSection = () => {
       gsap.fromTo('.stat-card',
         {
           opacity: 0,
-          y: 80,
-          scale: 0.8,
-          rotateY: -10
+          y: 40
         },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          rotateY: 0,
-          duration: 1,
-          ease: "back.out(1.4)",
-          stagger: {
-            amount: 0.4,
-            from: "start",
-            ease: "power2.inOut"
-          },
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.15,
           scrollTrigger: {
             trigger: '.stats-grid',
             start: 'top 75%',
@@ -109,10 +97,10 @@ const StatsSection = () => {
               if (!hasAnimated) {
                 setTimeout(() => {
                   document.querySelectorAll('.counter-number').forEach((counter, index) => {
-                    animateCounter(counter, statsData[index].number, 3)
+                    animateCounter(counter, statsData[index].number, 1.5)
                   })
                   setHasAnimated(true)
-                }, 600)
+                }, 400)
               }
             }
           }
@@ -128,10 +116,10 @@ const StatsSection = () => {
           },
           {
             scaleX: 1,
-            opacity: 1,
-            duration: 0.8,
+            opacity: 0.6,
+            duration: 0.5,
             ease: "power2.out",
-            delay: index * 0.1,
+            delay: index * 0.08,
             scrollTrigger: {
               trigger: line,
               start: 'top 85%',
@@ -174,7 +162,7 @@ const StatsSection = () => {
             return (
             <div
               key={index}
-              className='stat-card group relative text-center transition-transform duration-500 ease-out will-change-transform'
+              className='stat-card group relative text-center transition-all duration-300 ease-out'
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -197,15 +185,15 @@ const StatsSection = () => {
                 <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D3FD50] to-transparent transition-opacity duration-300 rounded-t-[32px] ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
 
                 <div className='relative z-10'>
-                  <div className='stat-icon text-4xl sm:text-5xl lg:text-6xl mb-6 sm:mb-8 inline-block transform transition-transform duration-300 group-hover:scale-110 will-change-transform'>
+                  <div className='stat-icon text-4xl sm:text-5xl lg:text-6xl mb-6 sm:mb-8 inline-block transform transition-transform duration-200 group-hover:scale-105'>
                     <span className={`
                       inline-block
                       bg-gradient-to-br ${stat.color}
                       bg-clip-text text-transparent
-                      transition-all duration-300
+                      transition-all duration-200
                     `}
                     style={{
-                      filter: `drop-shadow(0 0 15px ${stat.glowColor})`
+                      filter: `drop-shadow(0 0 12px ${stat.glowColor})`
                     }}>
                       {stat.icon}
                     </span>
@@ -221,11 +209,11 @@ const StatsSection = () => {
                           bg-gradient-to-br ${stat.color}
                           bg-clip-text text-transparent
                           inline-block
-                          transition-transform duration-300 will-change-transform
-                          ${isHovered ? 'scale-105' : 'scale-100'}
+                          transition-transform duration-200
+                          ${isHovered ? 'scale-103' : 'scale-100'}
                         `}
                         style={{
-                          filter: `drop-shadow(0 0 20px ${stat.glowColor})`,
+                          filter: `drop-shadow(0 0 15px ${stat.glowColor})`,
                           WebkitTextFillColor: 'transparent',
                           WebkitBackgroundClip: 'text'
                         }}
@@ -241,7 +229,7 @@ const StatsSection = () => {
                           inline-block
                         `}
                         style={{
-                          filter: `drop-shadow(0 0 20px ${stat.glowColor})`,
+                          filter: `drop-shadow(0 0 15px ${stat.glowColor})`,
                           WebkitTextFillColor: 'transparent',
                           WebkitBackgroundClip: 'text'
                         }}
@@ -251,7 +239,7 @@ const StatsSection = () => {
                     </div>
                   </div>
 
-                  <p className='font-[font1] text-base sm:text-lg lg:text-xl leading-relaxed text-white/80 transition-colors duration-300 group-hover:text-white'>
+                  <p className='font-[font1] text-base sm:text-lg lg:text-xl leading-relaxed text-white/80 transition-colors duration-200 group-hover:text-white'>
                     {stat.label}
                   </p>
 
@@ -261,11 +249,11 @@ const StatsSection = () => {
                         accent-line
                         absolute inset-0
                         bg-gradient-to-r from-transparent via-[#D3FD50] to-transparent
-                        transition-all duration-300 will-change-transform
-                        ${isHovered ? 'opacity-100 scale-x-110' : 'opacity-60 scale-x-100'}
+                        transition-opacity duration-200
+                        ${isHovered ? 'opacity-100' : 'opacity-60'}
                       `}
                       style={{
-                        filter: `drop-shadow(0 0 8px ${stat.glowColor})`
+                        filter: `drop-shadow(0 0 6px ${stat.glowColor})`
                       }}
                     ></div>
                   </div>
@@ -279,7 +267,13 @@ const StatsSection = () => {
       <style jsx>{`
         @keyframes glow-pulse {
           0%, 100% { opacity: 0; }
-          50% { opacity: 0.3; }
+          50% { opacity: 0.2; }
+        }
+
+        .stat-card {
+          transform: translateZ(0);
+          backface-visibility: hidden;
+          perspective: 1000px;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -293,7 +287,7 @@ const StatsSection = () => {
 
         @media (hover: hover) and (pointer: fine) {
           .stat-card:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-4px) translateZ(0);
           }
         }
       `}</style>
