@@ -11,7 +11,7 @@ const teasers = [
   { url: 'https://www.youtube.com/watch?v=2qFnRXpSFn8', title: 'Jessie & Michael' },
   { url: 'https://www.youtube.com/watch?v=j5Yo9w4QLf8', title: 'Maher and Cynthia' },
   { url: 'https://www.youtube.com/watch?v=UZrSG4UUan8', title: 'Angela and John' },
-  { url: 'https://youtu.be/Ez5W4JI-peE', title: 'Jessie & Michael' }
+  { url: 'https://youtu.be/Ez5W4JI-peE', title: 'Nicole and Mena' }
 ]
 
 const PortfolioSection = () => {
