@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/all'
 import PortfolioGallery from './PortfolioGallery'
 
 const teasers = [
-  { url: 'https://www.youtube.com/watch?v=QX08wn8Bi6E', title: 'Summer & Mason    swipe left to see more' },
+  { url: 'https://www.youtube.com/watch?v=QX08wn8Bi6E', title: 'swipe left to see more' },
   { url: 'https://www.youtube.com/watch?v=xcD17BVK0hI', title: 'Ella and Summer' },
   { url: 'https://www.youtube.com/watch?v=L9PMwOelcRk', title: 'Good' },
   { url: 'https://www.youtube.com/watch?v=2qFnRXpSFn8', title: 'Jessie & Michael' },
